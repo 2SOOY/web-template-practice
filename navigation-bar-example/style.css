@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: royalblue;
+  padding: 8px 12px;
+  font-family: "Oswald";
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+li {
+  list-style: none;
+}
+
+.main-container {
+  font-size: 24px;
+}
+
+.main-container i {
+  color: darkkhaki;
+}
+
+.menu-container {
+  display: flex;
+  padding-left: 0;
+}
+
+.menu-container li {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.menu-container li:hover {
+  background: darkgray;
+  border-radius: 4px;
+}
+
+.icon-container {
+  display: flex;
+  padding-left: 0;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+.icon-container li {
+  padding: 8px 8px;
+}
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: darkkhaki;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .main-container {
+    width: 100%;
+  }
+
+  .menu-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-container li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icon-container {
+    display: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-container.active,
+  .icon-container.active {
+    display: flex;
+  }
+}
